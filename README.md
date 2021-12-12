@@ -10,5 +10,5 @@ A front end design for a tech company made using html, css and bootstrap.
 
 ## Demo
 
-Insert gif or link to demo
+[Live preview](https://falcon-tech.netlify.app/)
 
