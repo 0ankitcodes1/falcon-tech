@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/falcontech-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <title>Blog page</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav id="main-navbar" class="navbar fixed-top navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="./">
+                    <img class="navbar-logo" src="./images/falcontech-logo.png" alt="page icon" />
+                </a>
+                <div class="d-flex align-items-center">
+                    <a class="nav-link text-dark" href="./blog-details.html">Blog Details</a>
+                    <div onclick="navigationBar(this);"
+                        class="navbar-menu d-flex justify-content-center align-items-center flex-column">
+                        <div class="bar bar-1 rounded-pill"></div>
+                        <div class="bar bar-2 rounded-pill mt-2"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sidenavbar-container bg-dark">
+        <div class="container">
+            <div class="my-5 pt-5"></div>
+            <div class="navbar-card-grid">
+                <div class="navbar-card-grid-1">
+                    <a class="navbar-cards navbar-cards-1 mt-4" href="./about.html" onmouseenter="borderEffectOn(this);"
+                        onmouseout="borderEffectOff(this);">
+                        <div class="navbar-cards-bg bg-white d-flex justify-content-center">
+                            <div class="d-flex align-items-center">
+                                <span class="custom-subtitle-1   text-black star-rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                                <span class="custom-subtitle-1   text-black">About</span>
+                            </div>
+                        </div>
+                        <span class="spans" id="span-1"></span>
+                        <span class="spans" id="span-2"></span>
+                        <span class="spans" id="span-3"></span>
+                        <span class="spans" id="span-4"></span>
+                    </a>
+                    <a class="navbar-cards navbar-cards-2 shadow-sm mt-4" href="./service.html"
+                        onmouseenter="borderEffectOn(this);" onmouseout="borderEffectOff(this);">
+                        <div class="navbar-cards-bg bg-light d-flex justify-content-center align-items-center">
+                            <div class="d-flex align-items-center">
+                                <span class="custom-subtitle-1   text-black star-rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                                <span class="custom-subtitle-1   text-black">Services</span>
+                            </div>
+                        </div>
+                        <span class="spans" id="span-1"></span>
+                        <span class="spans" id="span-2"></span>
+                        <span class="spans" id="span-3"></span>
+                        <span class="spans" id="span-4"></span>
+                    </a>
+                </div>
+                <div class="navbar-card-grid-2">
+                    <a class="navbar-cards shadow-sm mt-4 navbar-cards-3" href="./portfolio.html"
+                        onmouseenter="borderEffectOn(this);" onmouseout="borderEffectOff(this);">
+                        <div class="navbar-cards-bg bg-light d-flex justify-content-center align-items-center">
+                            <div class="d-flex align-items-center">
+                                <span class="custom-subtitle-1   text-black star-rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                                <span class="custom-subtitle-1   text-black">Portfolio</span>
+                            </div>
+                        </div>
+                        <span class="spans" id="span-1"></span>
+                        <span class="spans" id="span-2"></span>
+                        <span class="spans" id="span-3"></span>
+                        <span class="spans" id="span-4"></span>
+                    </a>
+                </div>
+                <div class="navbar-card-grid-3">
+                    <a class="navbar-cards navbar-cards-4 shadow-sm mt-4 navbar-cards-4" href="./contact.html"
+                        onmouseenter="borderEffectOn(this);" onmouseout="borderEffectOff(this);">
+                        <div class="navbar-cards-bg  bg-light d-flex justify-content-center align-items-center">
+                            <div class="d-flex align-items-center">
+                                <span class="custom-subtitle-1   text-black star-rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                                <span class="custom-subtitle-1   text-black">Contact</span>
+                            </div>
+                        </div>
+                        <span class="spans" id="span-1"></span>
+                        <span class="spans" id="span-2"></span>
+                        <span class="spans" id="span-3"></span>
+                        <span class="spans" id="span-4"></span>
+                    </a>
+                    <a class="navbar-cards navbar-cards-5 shadow-sm mt-4" href="./blog.html"
+                        onmouseenter="borderEffectOn(this);" onmouseout="borderEffectOff(this);">
+                        <div class="navbar-cards-bg bg-light d-flex justify-content-center align-items-center">
+                            <div class="d-flex align-items-center">
+                                <span class="custom-subtitle-1   text-black star-rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                                <span class="custom-subtitle-1   text-black">Blog</span>
+                            </div>
+                        </div>
+                        <span class="spans" id="span-1"></span>
+                        <span class="spans" id="span-2"></span>
+                        <span class="spans" id="span-3"></span>
+                        <span class="spans" id="span-4"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============== -->
+
+
+    <!-- Page title section  -->
+    <div class="my-5 py-4"></div>
+    <section class="container">
+        <div class="d-inline-block">
+            <h2 class="custom-title-2 text-black ">Our Favourite plugins for craft CMS</h2>
+        </div>
+    </section>
+    <!-- ============== -->
+
+    <!-- Blog details section -->
+    <section class="container">
+        <div class="d-flex my-3 align-items-center">
+            <div class="d-flex align-items-center" style="margin-right: 2rem;">
+                <span><a class="text-dark custom-subtitle-2 custom-subtitle-2 custom-dark-blue-text border-bottom"
+                        href="">BY KIRTAN</a></span>
+                <span class="mx-3 custom-subtitle-2 custom-dark-blue-text">|</span>
+                <span><a class="text-dark custom-subtitle-2 custom-dark-blue-text" href="">5TH MAY
+                        2021</a></span>
+            </div>
+
+            <div><a
+                    class="px-4 rounded-pill py-2 custom-subtitle-1 custom-light-blue-bg custom-dark-blue-text">Branding</a>
+            </div>
+        </div>
+        <div>
+            <img class="blog-img mt-3" src="./images/blog-thumbnail.png" alt="blog thumbnail" />
+        </div>
+        <div class="mt-4 border-bottom border-dark pb-3">
+            <p class="custom-subtitle-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. At eget ornare massa at ullamcorper turpis arcu
+                pellentesque sed. Tristique nullam sed viverra pharetra. Velit non dictumst vitae sit sagittis leo nisi
+                in. Amet, commodo et, scelerisque rutrum et. In turpis pharetra et vitae sed maecenas diam. Semper
+                imperdiet faucibus elementum consectetur elementum. Aliquam lacus, et aliquet id lacinia. Mattis neque,
+                sit cursus donec potenti ut arcu. Ipsum ut quis senectus accumsan et dictum pretium. Imperdiet massa
+                eget rhoncus odio. Venenatis nibh natoque nunc egestas commodo mattis in arcu nascetur. Enim adipiscing
+                massa donec ac neque dictum ornare sit. Nec nulla arcu, duis pulvinar aliquam fermentum tortor at.
+                Feugiat ut arcu et mattis massa.
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. At eget ornare massa at ullamcorper turpis arcu
+                pellentesque sed. Tristique nullam sed viverra pharetra. Velit non dictumst vitae sit sagittis leo nisi
+                in. Amet, commodo et, scelerisque rutrum et. In turpis pharetra et vitae sed maecenas diam. Semper
+                imperdiet faucibus elementum consectetur elementum. Aliquam lacus, et aliquet id lacinia. Mattis neque,
+                sit cursus donec potenti ut arcu. Ipsum ut quis senectus accumsan et dictum pretium. Imperdiet massa
+                eget rhoncus odio. Venenatis nibh natoque nunc egestas commodo mattis in arcu nascetur. Enim adipiscing
+                massa donec ac neque dictum ornare sit. Nec nulla arcu, duis pulvinar aliquam fermentum tortor at.
+                Feugiat ut arcu et mattis massa.
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. At eget ornare massa at ullamcorper turpis arcu
+                pellentesque sed. Tristique nullam sed viverra pharetra. Velit non dictumst vitae sit sagittis leo nisi
+                in. Amet, commodo et, scelerisque rutrum et. In turpis pharetra et vitae sed maecenas diam. Semper
+                imperdiet faucibus elementum consectetur elementum. Aliquam lacus, et aliquet id lacinia. Mattis neque,
+                sit cursus donec potenti ut arcu. Ipsum ut quis senectus accumsan et dictum pretium. Imperdiet massa
+                eget rhoncus odio. Venenatis nibh natoque nunc egestas commodo mattis in arcu nascetur. Enim adipiscing
+                massa donec ac neque dictum ornare sit. Nec nulla arcu, duis pulvinar aliquam fermentum tortor at.
+                Feugiat ut arcu et mattis massa.
+            </p>
+        </div>
+        <div class="mt-3">
+            <div style="width: 100%;" class="row">
+                <div class="col">
+                    <a href="" class="d-flex align-items-center custom-subtitle-2">
+                        <span class="star-rating" style="margin-right: 1rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                        </span>
+                        <span>Back to Blogs</span>
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="" class="d-flex align-items-center custom-subtitle-2">
+                        <span class="star-rating" style="margin-right: 1rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                        </span>
+                        <span>Previous</span>
+                    </a>
+                    <span class="custom-subtitle-2 mx-3">|</span>
+                    <a href="" class="d-flex align-items-center custom-subtitle-2">
+                        <span>Next</span>
+                        <span class="star-rating" style="margin-left: 1rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 pt-5">
+            <h2 class="custom-title-4">Related</h2>
+            <div class="blog-grid mt-5">
+                <div>
+                    <img class="blog-img" src="./images/blog-thumbnail.png" alt="blog thumbnail" />
+                    <div>
+                        <br>
+                        <span><a
+                                class="px-4 rounded-pill py-2 custom-subtitle-1 custom-light-blue-bg custom-dark-blue-text">Branding</a></span>
+                        <a class="custom-title-5 d-block mt-3 text-dark" href="">Our Favourate plugins for craft CMS</a>
+                        <div class="d-flex my-3">
+                            <span><a class="text-dark custom-subtitle-2 custom-subtitle-2 custom-dark-blue-text border-bottom"
+                                    href="">BY KIRTAN</a></span>
+                            <span class="mx-3 custom-subtitle-2 custom-dark-blue-text">|</span>
+                            <span><a class="text-dark custom-subtitle-2 custom-dark-blue-text" href="">5TH MAY
+                                    2021</a></span>
+                        </div>
+                        <p class="custom-subtitle-2">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque exercitationem voluptate,
+                            quasi
+                            repellendus facilis nobis suscipit ex, corrupti reiciendis autem numquam consequatur ut
+                            repellat
+                            impedit cum error quae pariatur veritatis.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <img class="blog-img" src="./images/blog-thumbnail.png" alt="blog thumbnail" />
+                    <div>
+                        <br>
+                        <span><a
+                                class="px-4 rounded-pill py-2 custom-subtitle-1 custom-light-blue-bg custom-dark-blue-text">Branding</a></span>
+                        <a class="custom-title-5 d-block mt-3 text-dark" href="">Our Favourate plugins for craft CMS</a>
+                        <div class="d-flex my-3">
+                            <span><a class="text-dark custom-subtitle-2 custom-subtitle-2 custom-dark-blue-text border-bottom"
+                                    href="">BY KIRTAN</a></span>
+                            <span class="mx-3 custom-subtitle-2 custom-dark-blue-text">|</span>
+                            <span><a class="text-dark custom-subtitle-2 custom-dark-blue-text" href="">5TH MAY
+                                    2021</a></span>
+                        </div>
+                        <p class="custom-subtitle-2">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque exercitationem voluptate,
+                            quasi
+                            repellendus facilis nobis suscipit ex, corrupti reiciendis autem numquam consequatur ut
+                            repellat
+                            impedit cum error quae pariatur veritatis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- news-letter-section -->
+    <section class="newsletter-section container my-5 py-5">
+        <h2 class="text-center custom-title-4">Subscribe to our Newsletter</h2>
+        <p class="text-center custom-subtitle-2 mt-3 mb-4">For growth hacks, latest news and exciting offers</p>
+        <form class="d-flex justify-content-center">
+            <div class="">
+                <label for="name" class="visually-hidden">Name</label>
+                <input type="text"
+                    class="form-control no-border-radius custom-subtitle-1 border-end-0 border-dark border-2" id="name"
+                    placeholder="Name">
+            </div>
+            <div class="">
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="email" class="custom-subtitle-1 form-control no-border-radius  border-dark border-2"
+                    id="email" placeholder="Email Address">
+            </div>
+            <div class="">
+                <button type="submit"
+                    class="btn btn-dark mb-3 no-border-radius custom-subtitle-1 text-white border-dark border-2">Subscribe</button>
+            </div>
+        </form>
+    </section>
+    <!-- =================== -->
+
+    <!-- Footer section -->
+    <section class="footer-section container-fluid mt-5 custom-dark-bg py-5">
+        <footer class="container mt-5">
+            <div class="mb-5">
+                <h1 class="text-white custom-title-1">Have an idea?</h1>
+                <a class="text-white fw-normal custom-title-1 border-bottom">Tell us about it</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+                    <div class="text-white">
+                        <p>Karna Marg, Chabahil, KTM</p>
+                        <p>9818721069</p>
+                        <p>falcontechnepal@gmail.com</p>
+                        <p>Sun-Fri (10 AM - 6 PM)</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+                    <div class="mb-3"><a class="text-white" href="./career.html">Career</a></div>
+                    <div class="mb-3"><a class="text-white" href="./faq.html">FAQ</a></div>
+                    <div class="mb-3"><a class="text-white" href="./terms.html">Terms & Conditions</a></div>
+                    <div><a class="text-white" href="./blog.html">Read our Blogs</a></div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <p class="text-white ">Follow-us</p>
+                    <div class="row">
+                        <a class="col-lg-6 text-white my-2" href="">
+                            <span class="star-rating">
+                                <?xml version="1.0"?><svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" width="24px" height="24px">
+                                    <path
+                                        d="M12,0C5.373,0,0,5.373,0,12c0,6.016,4.432,10.984,10.206,11.852V15.18H7.237v-3.154h2.969V9.927c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L16.73,15.18h-3.106v8.697 C19.481,23.083,24,18.075,24,12C24,5.373,18.627,0,12,0z" />
+                                </svg>
+                            </span>
+                            <span>Facebook</span>
+                        </a>
+                        <a class="col-lg-6 text-white my-2" href="">
+                            <span class="star-rating">
+                                <?xml version="1.0"?><svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z" />
+                                </svg>
+                            </span>
+                            <span>Instagram</span>
+                        </a>
+                        <a class="col-lg-6 text-white my-2" href="">
+                            <span class="star-rating">
+                                <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                                    <path
+                                        d="M 13 0.1875 C 5.925781 0.1875 0.1875 5.925781 0.1875 13 C 0.1875 18.421875 3.558594 23.046875 8.316406 24.917969 C 8.296875 24.480469 8.296875 22.210938 9.875 15.441406 C 10.085938 13.183594 9.792969 12.382813 9.792969 11.445313 C 9.792969 9.316406 10.898438 8.867188 11.546875 8.867188 C 12.46875 8.867188 13.738281 9.21875 13.738281 10.703125 C 13.738281 12.402344 12.351563 12.851563 12.351563 12.851563 C 12.351563 12.851563 12.253906 13.285156 12.136719 14.492188 C 12.023438 15.703125 12.507813 17.015625 14.480469 17.015625 C 17.644531 17.015625 18.132813 12.621094 18.132813 11.410156 C 18.132813 9.742188 16.910156 6.351563 13.109375 6.351563 C 8.042969 6.351563 7.171875 10.890625 7.171875 12.101563 C 7.171875 12.621094 7.3125 13.535156 7.410156 13.925781 C 8.367188 14.082031 8.269531 15.390625 7.859375 15.761719 C 7.40625 16.171875 5.066406 16.660156 5.066406 11.527344 C 5.066406 6.640625 9.421875 4.121094 13.246094 4.121094 C 16.886719 4.121094 20.847656 6.632813 20.847656 11.46875 C 20.847656 15.789063 17.746094 19.1875 14.484375 19.1875 C 12.527344 19.1875 11.488281 17.574219 11.488281 17.574219 C 11.488281 19.085938 8.714844 24.273438 8.359375 24.933594 C 9.800781 25.492188 11.363281 25.8125 13 25.8125 C 20.078125 25.8125 25.8125 20.078125 25.8125 13 C 25.8125 5.921875 20.074219 0.1875 13 0.1875 Z" />
+                                </svg>
+                            </span>
+                            <span>Pinterest</span>
+                        </a>
+                        <a class="col-lg-6 text-white my-2" href="">
+                            <span class="star-rating">
+                                <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"
+                                    height="24px">
+                                    <path
+                                        d="M 24 4.300781 C 23.101563 4.699219 22.199219 5 21.199219 5.101563 C 22.199219 4.5 23 3.5 23.398438 2.398438 C 22.398438 3 21.398438 3.398438 20.300781 3.601563 C 19.300781 2.601563 18 2 16.601563 2 C 13.898438 2 11.699219 4.199219 11.699219 6.898438 C 11.699219 7.300781 11.699219 7.699219 11.800781 8 C 7.699219 7.800781 4.101563 5.898438 1.699219 2.898438 C 1.199219 3.601563 1 4.5 1 5.398438 C 1 7.101563 1.898438 8.601563 3.199219 9.5 C 2.398438 9.398438 1.601563 9.199219 1 8.898438 C 1 8.898438 1 8.898438 1 9 C 1 11.398438 2.699219 13.398438 4.898438 13.800781 C 4.5 13.898438 4.101563 14 3.601563 14 C 3.300781 14 3 14 2.699219 13.898438 C 3.300781 15.898438 5.101563 17.300781 7.300781 17.300781 C 5.601563 18.601563 3.5 19.398438 1.199219 19.398438 C 0.800781 19.398438 0.398438 19.398438 0 19.300781 C 2.199219 20.699219 4.800781 21.5 7.5 21.5 C 16.601563 21.5 21.5 14 21.5 7.5 C 21.5 7.300781 21.5 7.101563 21.5 6.898438 C 22.5 6.199219 23.300781 5.300781 24 4.300781" />
+                                </svg>
+                            </span>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- ============== -->
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
